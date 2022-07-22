@@ -7,3 +7,8 @@
 - now run test secrets acceissibility by running
     - test_secrets_access.yml (secrets managed from other workflow)
     - test_secrets_manual_access.yml (manually managed secrets )
+
+## After running `create-secret.yml` (Bootstrap) workflow, the GH seccrets UI looks like below
+
+<img width="1146" alt="image" src="https://user-images.githubusercontent.com/15211916/180464979-a1613109-2818-4328-bd40-e97a77ae3440.png">
+The workflow created a secret named `DUMMY_AWS_IAM_ROLE_ASSUME`
