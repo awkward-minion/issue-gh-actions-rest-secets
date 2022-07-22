@@ -1,14 +1,9 @@
-# Welcome to your CDK TypeScript project
+# Notes
 
-This is a blank project for CDK development with TypeScript.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+- add `AWS_SECRET_ACCESS_KEY` in github secrets
+- create personal access token with repo write scope and store it in `GITHUB_WRITE_TOKEN`
+- run `create-secret.yml` workflow, which will store `DUMMY_AWS_IAM_ROLE_ASSUME` in gh secrets
+- add `SAME_SECRET_MANUALLY_ADDED` in gh secrets with same value (same aws role)
+- now run test secrets acceissibility by running
+    - test_secrets_access.yml (secrets managed from other workflow)
+    - test_secrets_manual_access.yml (manually managed secrets )
