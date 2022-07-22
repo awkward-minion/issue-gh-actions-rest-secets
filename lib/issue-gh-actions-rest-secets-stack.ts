@@ -27,7 +27,7 @@ export class IssueGhActionsRestSecetsStack extends Stack {
       assumedBy: GitHubPrincipal,
       description: 'Role to reproduce issue with rest api',
       roleName: 'github-issue-test-role',
-      maxSessionDuration: Duration.minutes(20),
+      maxSessionDuration: Duration.minutes(60),
       inlinePolicies: {
         CdkDeploymentPolicy: new iam.PolicyDocument({
           assignSids: true,
